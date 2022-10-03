@@ -12,7 +12,7 @@ def get_repo(repo_key):
     try:
         return Repository(path)
     except GitError:
-        raise NotFound("repository not found")
+        raise NotFound("repository not found : {} ".format(path))
 
 
 def get_commit(repo, sha):
